@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: url('blackcoffee.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* White font color */
+}
+.container {
+    margin-top: 70px;
+    background-color: rgba(87, 72, 33, 0.315); /* Background color with opacity */
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(173, 196, 194, 0.5);
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .email, .pass, .signup {
+        width: 100%;
+    }
+}
+h2 {
+    color: #b99530;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.email, .pass, .signup {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(1, 255, 221, 0.5);
+    background-color:rgba(230, 230, 11, 0.801);; /* Background color for input fields */
+    color: #fff; /* White font color */
+}
+.email:focus, .pass:focus, .signup:focus {
+    outline: none;
+    box-shadow: 0 0 30px rgba(255, 64, 129, 0.7);
+}
+.signup {
+    box-shadow: 0 0 20px rgba(45, 88, 5, 0.5);
+    background-color: #b99530; /* Background color for the signup button */
+    color: #fff; /* White font color */
+    cursor: pointer;
+}
+.signup:hover {
+    background-color: #1f1702; /* Darker color on hover */
+}
+.login-link {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #fff; /* White font color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.login-link a {
+    color: #b99530; /* Link color */
+    text-decoration: none;
+}
+.login-options {
+    margin-top: 20px;
+}
+.login-option {
+    margin-right: 10px;
+    color: #fff; /* White font color for login options */
+}
+p{ color:whitesmoke}

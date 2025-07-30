@@ -1,0 +1,478 @@
+/* General styles */
+html {
+    scroll-behavior: smooth; }
+body {
+   
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    margin: 0;
+    padding: 0;
+   
+}
+
+/* Hero section */
+.first {
+    position: relative;
+    text-align: center;
+    color: rgb(219, 219, 172);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(coffeehouse.jpg) no-repeat center center/cover;
+    padding: 100px 0;
+}
+
+.first h1 {
+    font-size: 72px;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 0;
+    padding-top: 0px;
+}
+
+/* Opening hours */
+.opening-hours {
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #58585886;
+}
+.opening-hoursimg:hover {
+     /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.hours {
+    margin: 0 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hours-text {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 20px; 
+}
+
+.hours-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Our Story section */
+.our-story-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.our-story-text {
+    background-color: #4e357581;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.our-story-text p {
+    font-size: 18px;
+    color: rgb(160, 189, 131);
+    text-align: center;
+}
+
+/* Book availability section */
+.book-availability-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book-availability {
+    position: relative;
+    margin: 20px;
+}
+
+.book-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.book-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.book-overlay:hover {
+    opacity: 1;
+}
+
+.book-text {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px;
+    max-width: 80%;
+    display: none;
+}
+
+.book-availability:hover .book-text {
+    display: block;
+}
+
+/* Content wrapper */
+.content-wrapper {
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.content-wrapper h2 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.content-wrapper p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Menu section */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.navbar .navbar-nav .nav-link {
+    padding: 25px 0;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+  }
+  
+  .navbar .navbar-nav .nav-link:hover,
+  .navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+  }
+  
+  @media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+  
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+  
+    .navbar .nav-item:hover .dropdown-menu {
+      top: 100%;
+      visibility: visible;
+      transition: .5s;
+      opacity: 1;
+  }
+  .nav-item.nav-link:hover {
+      color: #ecf0f1;
+      transition: color 0.3s ease-in-out;
+  }
+  }
+  .nav-item.nav-link:hover,
+  .dropdown-item:hover {
+      background-color: #3a3a3a !important;
+      transition: background-color 0.3s ease-in-out;
+  } 
+  .navbar .navbar-nav .nav-link {
+          padding: 10px ;
+      }
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h5 {
+    margin-bottom: 20px;
+    color: #ffc107; /* Yellow color for subtitles */
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+blockquote {
+    margin-bottom: 1rem;
+    font-size: 1.25rem
+}
+
+.blockquote-footer {
+    display: block;
+    font-size: 80%;
+    color: #6c757d
+}
+
+.blockquote-footer::before {
+    content: "\2014\00A0"
+}
+
+  /* Add this CSS to your project.css file or within a <style> tag in your HTML file */
+.chat-popup {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to change the vertical position */
+    right: 20px; /* Adjust this value to change the horizontal position */
+    max-width: 300px; /* Adjust the maximum width as needed */
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 9999; /* Ensure the chat popup appears on top of other elements */
+}
+
+.form-container {
+    max-width: 100%;
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    resize: none; /* Prevent resizing of the textarea */
+}
+
+.form-container .btn {
+    width: 48%;
+    margin-right: 2%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container .cancel {
+    background-color: #aa7572;
+}
+
+.form-container .btn:hover, .form-container .cancel:hover {
+    opacity: 0.8;
+}
+
+
+.open-button {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to change the vertical position */
+     width: 120px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    background-color: #1b68a744; /* Set the background color */
+    color: white; /* Set the text color */
+    border: none;
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer;
+    position: fixed; /* Fixed/sticky position */
+    right: 30px; /* Adjust this value to align the "Open Chat" button */
+    z-index: 99;
+}
+
+.open-button:hover {
+    background-color: #0c2355; /* Change the background color on hover */
+}
+
+.open-button:active {
+    background-color: #39047e; /* Change the background color when the button is clicked */
+    transform: translateY(2px); /* Add a slight vertical movement when clicked */
+}
+
+/* "Top" button CSS */
+#myBtn {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Adjust this value to position the "Top" button vertically */
+    right: calc(30px + 150px); /* Adjust this value to position the "Top" button horizontally (30px from "Open Chat" button) */
+    z-index: 99; /* Ensure it is on top of other elements */
+    display: flex; /* Initially hide the "Top" button */
+    background-color: rgba(128, 128, 128, 0.103);
+   
+}
+
+#myBtn:hover {
+    display: block;
+    background-color: #9770708e; /* Add a dark-grey background on hover */
+}
+
+/* Chat button CSS */
+.open-button {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Adjust this value to position the "Open Chat" button vertically */
+    right: 30px; /* Adjust this value to position the "Open Chat" button horizontally */
+    z-index: 99; /* Ensure it is on top of other elements */
+  
+}
+
+
+.chat-popup {
+    display: none;
+   
+}

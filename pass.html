@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="pass.css">
+    <style>
+        b
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Forgot Password</h2>
+        <form action="#" method="post" id="forgotPasswordForm">
+            <div class="email-section">
+                <input type="text" name="email" placeholder="Email" class="email" required>
+                <input type="submit" value="Submit" class="submit" onclick="showCodeSection(event)">
+            </div>
+            <div class="code-section" style="display: none;">
+                <input type="text" name="code" placeholder="Enter Code" class="code" required>
+                <input type="submit" value="Verify Code" class="submit" onclick="showBackupOptions(event)">
+            </div>
+            <div class="backup-options">
+                <p>Didn't receive the code?</p>
+                <p>Backup your account with an alternate method.</p>
+                <!-- Include backup options here -->
+            </div>
+        </form>
+        <div class="back-link">Remembered your password? <a href="login.php">Login</a></div>
+    </div>
+    <script src="pass.js"></script>
+</body>
+</html>
